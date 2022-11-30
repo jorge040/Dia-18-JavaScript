@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego</title>
+</head>
+<body>
+
+    <script>
+        var jugador1 = {
+            nombre: ' Juan ',
+            puntos: 0,
+            imprimir: function(){
+                document.write(' Nombre' + this.nombre + '<br>');
+                document.write(' Puntos' + this.puntos + '<br>');
+            },
+            AumentarPuntos: function(cant){
+                this.puntos = this.puntos + cant;
+            },
+
+            Verificarsigano: function(){
+                if (this.puntos >= 1000) {
+                    document.write(' Gano <br>');
+                }else{
+                    if (this.puntos <= 999) {
+                        document.write(' Lo siento te faltaron puntos para ganar ');
+                    }
+                }
+            }
+        };
+
+        jugador1.imprimir();
+        jugador1.AumentarPuntos(500);
+        jugador1.Verificarsigano();
+        jugador1.AumentarPuntos(501);
+        jugador1.Verificarsigano();
+        jugador1.imprimir();
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
